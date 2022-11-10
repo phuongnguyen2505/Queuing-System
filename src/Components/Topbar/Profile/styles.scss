@@ -1,0 +1,28 @@
+.profile {
+  width: 250px;
+  height: 42px;
+  display: flex;
+  margin-top: 24px;
+  &__avatar {
+    margin-right: 8px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+  &__name {
+    p {
+      margin-bottom: 0;
+      color: var(--gray-500);
+    }
+    .hello {
+      font-size: 0.75rem;
+      line-height: 18px;
+    }
+    .name {
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+}

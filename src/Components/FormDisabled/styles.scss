@@ -1,0 +1,11 @@
+.form-disabled {
+  input {
+    background: var(--gray-50) !important;
+    height: 44px;
+  }
+  label {
+    &::after {
+      content: "";
+    }
+  }
+}

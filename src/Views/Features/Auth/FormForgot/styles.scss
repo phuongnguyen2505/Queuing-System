@@ -1,0 +1,17 @@
+.row {
+  .logo {
+    margin-left: 165px !important;
+  }
+  .loginFrom {
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+      button.btn {
+        &:hover {
+          background: var(--orange-100);
+        }
+      }
+    }
+  }
+}

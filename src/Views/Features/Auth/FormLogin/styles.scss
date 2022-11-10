@@ -1,0 +1,60 @@
+.flex {
+  justify-content: space-between;
+}
+.container-fluid {
+  .row {
+    flex-direction: column;
+    margin-top: 84px;
+    .logo {
+      margin: 0 auto;
+    }
+  }
+}
+
+.loginFrom {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 50px;
+
+  a {
+    margin-bottom: 20px;
+    color: var(--red);
+  }
+  button {
+    margin: 0 auto;
+  }
+}
+
+.row > .queuing {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .queuing {
+    width: 50vh;
+    height: 100vh;
+    &__bg-img {
+      position: relative;
+      left: 15%;
+      img {
+        width: 100%;
+      }
+    }
+    &__title {
+      width: 400px;
+      color: var(--orange-500);
+      p {
+        font-weight: 400;
+        font-size: 34px;
+        margin: 0;
+      }
+      span {
+        width: 380px;
+
+        font-weight: bold;
+        font-size: 36px;
+      }
+    }
+  }
+}
