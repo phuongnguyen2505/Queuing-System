@@ -1,7 +1,5 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../../Components/Button";
-import FormInput from "../../../../Components/FormInput";
 import FromPassword from "../../../../Components/FormPassword";
 import Logo from "../../../../Components/Logo";
 import Title from "../../../../Components/Title";

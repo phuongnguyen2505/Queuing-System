@@ -1,0 +1,33 @@
+.formchart {
+  width: 100%;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.3);
+  margin-top: 8px;
+  .title {
+    color: var(--gray-500);
+  }
+  &__topbar {
+    justify-content: space-between;
+    .col {
+      .title {
+        padding-bottom: 5px;
+      }
+    }
+    span {
+      font-weight: 600;
+      .ant-select {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__selected-day {
+    font-size: 0.875rem;
+    color: var(--gray-200);
+  }
+  &__chart {
+    height: 35vh;
+    margin-top: 40px;
+  }
+}

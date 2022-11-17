@@ -6,8 +6,47 @@
   border-radius: 32px;
   margin-right: 24px;
   margin-top: 28px;
+  z-index: 1;
+  &:hover,
+  &:active {
+    background: var(--orange-500);
+    svg {
+      path {
+        fill: var(--white);
+      }
+    }
+  }
   cursor: pointer;
   svg {
     margin: 6px auto;
+  }
+}
+.Menu {
+  &:nth-child(2) {
+    margin-top: 30px;
+  }
+  .title {
+    background: var(--orange-400);
+    border-radius: 10px 10px 0 0;
+    padding: 9px 24px;
+    color: var(--white);
+  }
+}
+.item-noti {
+  padding: 9px 24px;
+
+  span {
+    &:first-child {
+      color: var(--orange-600);
+      font-weight: 700;
+    }
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    margin: 0 auto;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-100);
+    opacity: 0.6;
   }
 }

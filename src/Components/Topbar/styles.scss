@@ -1,5 +1,6 @@
-.container {
+.container.topbar {
   width: 100%;
+  z-index: 1;
   .right-group {
     display: flex;
   }

@@ -9,7 +9,7 @@ import { Outlet } from "react-router-dom";
 function Topbar() {
   return (
     <>
-      <div className="container">
+      <div className="container topbar">
         <div className="flex">
           <Breadcrumbs />
           <div className="right-group">

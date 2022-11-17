@@ -3,6 +3,9 @@
     margin-left: 165px !important;
   }
   .loginFrom {
+    .title {
+      text-align: center !important;
+    }
     &__btn {
       display: flex;
       justify-content: space-between;

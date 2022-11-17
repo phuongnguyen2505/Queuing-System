@@ -10,7 +10,7 @@ const Title: React.FC<Props> = ({ children, fontSize }) => {
     <>
       <p
         className="title"
-        style={{ fontSize, fontWeight: "700", textAlign: "center" }}
+        style={{ fontSize, fontWeight: "700", textAlign: "left" }}
       >
         {children}
       </p>

@@ -3,6 +3,7 @@
   height: 42px;
   display: flex;
   margin-top: 24px;
+  z-index: 1;
   &__avatar {
     margin-right: 8px;
     img {

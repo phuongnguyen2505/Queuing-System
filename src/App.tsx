@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import "antd/dist/antd.min.css";
 import "./App.css";
-
 import Navbar from "./Components/Navbar";
 import FormForgot from "./Views/Features/Auth/FormForgot";
 import FormLogin from "./Views/Features/Auth/FormLogin";
@@ -14,7 +14,7 @@ function App() {
     <>
       <Routes>
         <Route path="" element={<Navbar />}>
-          <Route index path="" element={<Dashboard />} />
+          <Route index path="/" element={<Dashboard />} />
           <Route path="/device" element={<Device />} />
           <Route path="/profile" element={<ProfileDetails />} />
           {/* <Route path="/service" element={<Service />} />
