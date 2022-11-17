@@ -13,9 +13,7 @@ const Breadcrumbs = () => {
       <>
         <Breadcrumb separator=">">
           {pathnames.length > 0 ? (
-            <Breadcrumb.Item className="breadcrumbsCustomStyle">
-              <Link to="/">Dashboard</Link>
-            </Breadcrumb.Item>
+            <Breadcrumb.Item className="breadcrumbsCustomStyle"></Breadcrumb.Item>
           ) : (
             <Breadcrumb.Item className="breadcrumbsCustomStyle">
               Dashboard
@@ -31,6 +29,7 @@ const Breadcrumbs = () => {
               Level: "Cấp số",
               Report: "Báo cáo",
               Setting: "Cài đặt hệ thống",
+              listDevice: "Danh sách thiết bị",
             };
             return isLast ? (
               <Breadcrumb.Item key={name} className="breadcrumbsCustomStyle">
@@ -38,7 +37,7 @@ const Breadcrumbs = () => {
               </Breadcrumb.Item>
             ) : (
               <Breadcrumb.Item className="breadcrumbsCustomStyle">
-                <Link to={`${routeTo}`}>{name}</Link>
+                <Link to={`${routeTo}`}>{pages[name]}</Link>
               </Breadcrumb.Item>
             );
           })}

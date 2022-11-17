@@ -8,7 +8,12 @@ const handleChange = (value: string) => {
   console.log(`selected ${value}`);
 };
 
-const FormSelect = () => {
+interface Props {
+  option: string;
+  value: string;
+}
+
+const FormSelect: React.FC<Props> = ({ option, value }) => {
   return (
     <>
       <Select
@@ -22,13 +27,11 @@ const FormSelect = () => {
           />
         }
         style={{ width: 100 }}
-        defaultValue="Ngày"
+        defaultValue={option}
         optionFilterProp="children"
         onChange={handleChange}
       >
-        <Option value="day">Ngày</Option>
-        <Option value="week">Tháng</Option>
-        <Option value="month">Năm</Option>
+        <Option value={value}>{option}</Option>
       </Select>
     </>
   );

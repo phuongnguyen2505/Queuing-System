@@ -33,25 +33,27 @@ const items = [
   },
 ];
 const menu = (
-  <Menu
-    className="Menu"
-    style={{
-      width: 360,
-      height: 450,
-      borderRadius: 10,
-      overflow: "auto",
-    }}
-  >
+  <>
     <Title fontSize="20px" children="Thông báo" />
-    {items.map((item) => (
-      <Menu.Item>
-        <div className="row item-noti">
-          <span>{item.label}</span>
-          <span>{item.time}</span>
-        </div>
-      </Menu.Item>
-    ))}
-  </Menu>
+    <Menu
+      className="Menu"
+      style={{
+        width: 360,
+        height: 360,
+        borderRadius: 10,
+        overflow: "auto",
+      }}
+    >
+      {items.map((item) => (
+        <Menu.Item>
+          <div className="row item-noti">
+            <span>{item.label}</span>
+            <span>{item.time}</span>
+          </div>
+        </Menu.Item>
+      ))}
+    </Menu>
+  </>
 );
 const Notification: React.FC = () => {
   return (

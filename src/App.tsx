@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="" element={<Navbar />}>
           <Route index path="/" element={<Dashboard />} />
-          <Route path="/device" element={<Device />} />
+          <Route path="/device/listDevice" element={<Device />} />
           <Route path="/profile" element={<ProfileDetails />} />
           {/* <Route path="/service" element={<Service />} />
           <Route path="/level" element={<Level />} />
