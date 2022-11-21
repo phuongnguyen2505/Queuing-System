@@ -1,0 +1,42 @@
+.FormAddDevice {
+  padding: 32px 24px;
+  width: 1180px;
+  background: var(--white);
+  box-shadow: 2px 2px 8px rgb(145, 149, 153, 0.3);
+  border-radius: 16px;
+  .row {
+    margin-top: 20px;
+    .col {
+      flex-grow: 0;
+      margin-right: 24px;
+      label {
+        font-size: 18px;
+        // margin-bottom: 5px;
+        &::after {
+          content: " *";
+          color: var(--red);
+        }
+      }
+      .ant-select {
+        margin-top: 5px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &__noti {
+    &::before {
+      content: "* ";
+      color: var(--red);
+    }
+  }
+  &__gr-btn {
+    position: absolute;
+    bottom: 32px;
+    left: 30%;
+    button {
+      &:first-child {
+        margin-right: 32px;
+      }
+    }
+  }
+}

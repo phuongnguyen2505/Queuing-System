@@ -26,7 +26,6 @@ function ResetPassword() {
               radius="8px"
               width="162px"
               children="Xác nhận"
-              cursor="pointer"
             />
           </div>
         </div>

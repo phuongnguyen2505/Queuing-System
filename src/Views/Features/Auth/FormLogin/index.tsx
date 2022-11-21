@@ -28,7 +28,6 @@ function FormLogin() {
               radius="8px"
               width="162px"
               children="Đăng nhập"
-              cursor="pointer"
             />
           </div>
         </div>

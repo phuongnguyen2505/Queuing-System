@@ -32,7 +32,6 @@ function FormForgot() {
                 radius="8px"
                 width="162px"
                 children="Hủy"
-                cursor="pointer"
               />
               <Button
                 border="none"
@@ -43,7 +42,6 @@ function FormForgot() {
                 radius="8px"
                 width="162px"
                 children="Tiếp tục"
-                cursor="pointer"
               />
             </div>
           </div>

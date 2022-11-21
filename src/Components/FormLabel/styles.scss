@@ -1,0 +1,16 @@
+.FormLabel {
+  max-width: 250px;
+  min-width: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  span {
+    font-weight: 600;
+    color: var(--gray-500) !important;
+  }
+  input {
+    width: 40%;
+    border: none;
+  }
+}

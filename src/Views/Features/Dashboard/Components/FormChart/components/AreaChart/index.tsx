@@ -1,24 +1,38 @@
-import { Area } from "@ant-design/plots";
+import ReactApexChart from "react-apexcharts";
 import "./styles.scss";
 
-const AreaChart = () => {
-  const data = [
-    { days: "01", value: 2500 },
-    { days: "13", value: 3500 },
-    { days: "19", value: 4221 },
-    { days: "31", value: 3800 },
-  ];
-
-  const config = {
-    data,
-    xField: "days",
-    yField: "value",
-    xAxis: {
-      range: [0, 1],
+const AreaChart: React.FC<Props> = ({ tasks }) => {
+  const options = {
+    chart: {
+      height: 350,
+      type: "area",
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      curve: "smooth",
+    },
+    xaxis: {
+      categories: ["01", "", "", "13", "", "19", "", "", "31"],
     },
   };
 
-  return <Area {...config} />;
+  const series = [
+    {
+      name: "All Tasks",
+      data: [2500, 4200, 4000, 3500, 3200, 4221, 3300, 4300, 3200],
+    },
+  ];
+
+  return (
+    <ReactApexChart
+      type="area"
+      options={options}
+      series={series}
+      height={300}
+    />
+  );
 };
+
 export default AreaChart;
-// ReactDOM.render(<AreaChart />, document.getElementById("container"));

@@ -1,0 +1,40 @@
+.FormDetails {
+  &__left {
+    width: 1112px;
+    border-radius: 16px;
+    padding: 32px 24px 16px;
+    box-shadow: 2px 2px 8px rgba(192, 199, 203, 0.5);
+    .row {
+      margin: 20px 0 16px;
+      justify-content: space-between;
+      .col {
+        text-align: left;
+      }
+    }
+  }
+  &__right {
+    position: absolute;
+    right: 0;
+    width: 80px;
+    height: 94px;
+    button {
+      border: none;
+      width: 100%;
+      height: 100%;
+      background: var(--orange-50);
+      color: var(--orange-500);
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px 0px 0px 8px;
+    }
+  }
+  &__service {
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    span {
+      font-weight: 600;
+    }
+  }
+}

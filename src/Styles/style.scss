@@ -1,0 +1,11 @@
+.rc-virtual-list {
+  .rc-virtual-list-holder-inner {
+    .ant-select-item {
+      padding: 10px;
+      font-size: 16px;
+    }
+    .ant-select-item-option-selected {
+      background: var(--orange-50);
+    }
+  }
+}

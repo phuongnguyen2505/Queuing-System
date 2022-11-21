@@ -5,9 +5,6 @@
   padding: 24px;
   box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.3);
   margin-top: 8px;
-  .title {
-    color: var(--gray-500);
-  }
   &__topbar {
     justify-content: space-between;
     .col {
@@ -27,7 +24,12 @@
     color: var(--gray-200);
   }
   &__chart {
-    height: 35vh;
-    margin-top: 40px;
+    height: 40vh;
+    // margin-top: 40px;
+  }
+  .ant-select-selector {
+    border-radius: 8px !important;
+    height: 42px !important;
+    align-items: center;
   }
 }

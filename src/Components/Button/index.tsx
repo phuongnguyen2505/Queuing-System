@@ -34,7 +34,8 @@ const Button: React.FC<Props> = ({
           borderRadius: radius,
           height,
           width,
-          cursor,
+          cursor: "pointer",
+          fontWeight: "700",
         }}
       >
         {children}

@@ -23,13 +23,15 @@ const Breadcrumbs = () => {
             const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
             const isLast = index === pathnames.length - 1;
             const pages: any = {
-              Device: "Thiết bị",
+              device: "Thiết bị",
               profile: "Thông tin cá nhân",
-              Service: "Dịch vụ",
-              Level: "Cấp số",
-              Report: "Báo cáo",
-              Setting: "Cài đặt hệ thống",
+              service: "Dịch vụ",
+              level: "Cấp số",
+              report: "Báo cáo",
+              setting: "Cài đặt hệ thống",
               listDevice: "Danh sách thiết bị",
+              addDevice: "Thêm thiết bị",
+              deviceDetails: "Chi tiết thiết bị",
             };
             return isLast ? (
               <Breadcrumb.Item key={name} className="breadcrumbsCustomStyle">

@@ -36,7 +36,7 @@ function Navbar() {
               </div>
             </NavLink>
             <NavLink
-              to="/Device/listDevice"
+              to="/device/listDevice"
               className={({ isActive }) => (isActive ? "active" : "inactive")}
             >
               <div className="card">
@@ -49,7 +49,7 @@ function Navbar() {
               </div>
             </NavLink>
             <NavLink
-              to="/Service"
+              to="/service"
               className={({ isActive }) => (isActive ? "active" : "inactive")}
             >
               <div className="card">
@@ -62,7 +62,7 @@ function Navbar() {
               </div>
             </NavLink>
             <NavLink
-              to="/Level"
+              to="/level"
               className={({ isActive }) => (isActive ? "active" : "inactive")}
             >
               <div className="card">
@@ -75,7 +75,7 @@ function Navbar() {
               </div>
             </NavLink>
             <NavLink
-              to="/Report"
+              to="/report"
               className={({ isActive }) => (isActive ? "active" : "inactive")}
             >
               <div className="card">
@@ -88,7 +88,7 @@ function Navbar() {
               </div>
             </NavLink>
             <NavLink
-              to="/Setting"
+              to="/setting"
               className={({ isActive }) => (isActive ? "active" : "inactive")}
             >
               <div className="card">

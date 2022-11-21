@@ -10,7 +10,11 @@ function Maincontent() {
       <div className="maincontent">
         <div className="row">
           <div className="col">
-            <Title children="Biểu đồ cấp số" fontSize="24px" />
+            <Title
+              children="Biểu đồ cấp số"
+              fontSize="24px"
+              color="var(--orange-500)"
+            />
             <CardStatus />
             <FormChart />
           </div>
