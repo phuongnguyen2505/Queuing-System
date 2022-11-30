@@ -32,6 +32,9 @@ const Breadcrumbs = () => {
               listDevice: "Danh sách thiết bị",
               addDevice: "Thêm thiết bị",
               deviceDetails: "Chi tiết thiết bị",
+              deviceUpdate: "Cập nhật thiết bị",
+              listService: "Danh sách dịch vụ",
+              addService: "Thêm dịch vụ",
             };
             return isLast ? (
               <Breadcrumb.Item key={name} className="breadcrumbsCustomStyle">

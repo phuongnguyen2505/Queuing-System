@@ -14,7 +14,11 @@ function ResetPassword() {
         <div className="row">
           <Logo width="170px" />
           <div className="loginFrom">
-            <Title children="Đặt lại mật khẩu mới" fontSize="22px" />
+            <Title
+              children="Đặt lại mật khẩu mới"
+              fontSize="22px"
+              color="var(--gray-500)"
+            />
             <FromPassword label="Mật khẩu" />
             <FromPassword label="Nhập lại mật khẩu" />
             <Button

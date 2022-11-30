@@ -16,7 +16,13 @@ function FormLogin() {
         <div className="row">
           <Logo width="170px" />
           <div className="loginFrom">
-            <FormInput label="Tên đăng nhập" width="400px" type="text" />
+            <FormInput
+              label="Tên đăng nhập"
+              width="400px"
+              type="text"
+              placeholder="Nhập tên đăng nhập"
+              value=""
+            />
             <FromPassword label="Mật khẩu" />
             <Link to="/forgot">Quên mật khẩu?</Link>
             <Button

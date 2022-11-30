@@ -1,0 +1,48 @@
+.addService {
+  width: 98%;
+  box-shadow: 2px 2px 8px rgba(186, 191, 194, 0.8);
+  border-radius: 16px;
+  margin-top: 32px;
+  padding: 18px 24px;
+  .ant-checkbox-wrapper {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    .ant-checkbox-inner {
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid var(--blue);
+      &::after {
+        left: 25%;
+      }
+    }
+  }
+  .text-check {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 35px;
+    margin: 0 12px;
+  }
+  &__form-checkbox {
+    margin-top: 22px;
+    .row {
+      margin-bottom: 12px;
+    }
+    .hidden-item {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+  }
+  &__gr-btn {
+    width: 98%;
+    text-align: center;
+    margin-top: 20px;
+    button {
+      &:first-child {
+        margin-right: 32px;
+      }
+    }
+  }
+}

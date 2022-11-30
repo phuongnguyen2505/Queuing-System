@@ -1,14 +1,16 @@
-import { Badge, Space, Table } from "antd";
+import { Badge, Space } from "antd";
 import React from "react";
 import { useId } from "react-id-generator";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import ReadMore from "../../../../../Components/ReadMore-Less";
+import FormTable from "../../../../../Components/FormTable";
 import Title from "../../../../../Components/Title";
 import { ReactComponent as Next } from "../../../../../icons/next.svg";
 import { ReactComponent as Plus } from "../../../../../icons/plus.svg";
 import { ReactComponent as Prev } from "../../../../../icons/prev.svg";
 import FormGroup from "../../Components/FormGroup";
 import "./styles.scss";
+import AddService from "../../../ServicePage/Pages/AddService";
 
 function Maincontent() {
   const dataSource = [
@@ -197,35 +199,6 @@ function Maincontent() {
       ),
     },
   ];
-  const [filterInput, setFilterInput] = React.useState("");
-  const filterData = () => {
-    if (filterInput === "") return dataSource;
-
-    if (isNaN(filterInput)) {
-      return dataSource.filter(({ name }) => name.includes(filterInput));
-    }
-    return dataSource.filter(({ code }) => code === filterInput);
-  };
-  const itemRender = (_, type: string, originalElement: any) => {
-    console.log(type, "a");
-    if (type === "prev") {
-      return (
-        <>
-          <Prev />
-        </>
-      );
-    }
-    if (type === "next") {
-      return (
-        <>
-          <Next />
-        </>
-      );
-    }
-    return originalElement;
-  };
-  const [htmlId] = useId();
-
   return (
     <>
       <div className="DeviceContent">
@@ -236,16 +209,9 @@ function Maincontent() {
               fontSize="24px"
               color="var(--orange-500)"
             />
-            <FormGroup onSearch={setFilterInput} />
+            <FormGroup onSearch="" />
             <div className="table">
-              <Table
-                dataSource={filterData()}
-                columns={columns}
-                pagination={{
-                  itemRender: itemRender,
-                }}
-                rowKey={htmlId}
-              />
+              <FormTable columns={columns} dataSource={dataSource} />
             </div>
           </div>
           <div className="btn-add">

@@ -34,7 +34,7 @@ const items = [
 ];
 const menu = (
   <>
-    <Title fontSize="20px" children="Thông báo" />
+    <Title fontSize="20px" children="Thông báo" color="var(--white)" />
     <Menu
       className="Menu"
       style={{

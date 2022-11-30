@@ -1,4 +1,4 @@
-.DeviceContent {
+.serviceContent {
   width: 100%;
   .table {
     height: 490px;
@@ -38,10 +38,8 @@
           background: var(--orange-50);
         }
         td {
-          padding: 0 16px;
-          &:not(:nth-child(6)) {
-            white-space: nowrap;
-          }
+          padding: 10px 16px;
+          white-space: nowrap;
         }
       }
     }
@@ -82,7 +80,6 @@
   a {
     text-decoration: underline;
   }
-
   .btn-add {
     position: relative;
     top: 125px;

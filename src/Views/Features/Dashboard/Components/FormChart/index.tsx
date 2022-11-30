@@ -1,9 +1,9 @@
 import { Select } from "antd";
 import React from "react";
 import Title from "../../../../../Components/Title";
-import ChartArea from "./components/AreaChart";
 import { CaretDownOutlined } from "@ant-design/icons";
 import "./styles.scss";
+import AreaChart from "./components/AreaChart";
 
 const { Option } = Select;
 const handleChange = (value: string) => {
@@ -61,7 +61,7 @@ const FormChart = () => {
           </span>
         </div>
         <div className="formchart__chart">
-          <ChartArea />
+          <AreaChart />
           {/* <TestChart /> */}
         </div>
       </div>

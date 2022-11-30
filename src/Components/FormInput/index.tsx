@@ -7,14 +7,26 @@ interface Props {
   width: string;
   type: string;
   placeholder: string;
+  value: string;
 }
 
-const FormInput: React.FC<Props> = ({ label, width, type, placeholder }) => {
+const FormInput: React.FC<Props> = ({
+  label,
+  width,
+  type,
+  placeholder,
+  value,
+}) => {
   return (
     <>
       <form className="form-input">
         <label htmlFor="">{label}</label>
-        <Input style={{ width }} type={type} placeholder={placeholder} />
+        <Input
+          style={{ width }}
+          value={value}
+          type={type}
+          placeholder={placeholder}
+        />
       </form>
     </>
   );

@@ -19,7 +19,11 @@ function ProfileDetails() {
                 </div>
               </div>
             </div>
-            <Title children="Nguyễn Duy Phương" fontSize="24px" />
+            <Title
+              children="Nguyễn Duy Phương"
+              fontSize="24px"
+              color="var(--gray-400)"
+            />
           </div>
           <div className="midcolumn">
             <FormDisabled

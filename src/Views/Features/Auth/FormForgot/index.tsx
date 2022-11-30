@@ -16,11 +16,17 @@ function FormForgot() {
         <div className="row">
           <Logo width="170px" />
           <div className="loginFrom">
-            <Title children="Đặt lại mật khẩu" fontSize="22px" />
+            <Title
+              children="Đặt lại mật khẩu"
+              fontSize="22px"
+              color="var(--gray-500)"
+            />
             <FormInput
               label="Vui lòng nhập email để đặt lại mật khẩu của bạn"
               width="400px"
               type="email"
+              placeholder=""
+              value=""
             />
             <div className="loginFrom__btn">
               <Button

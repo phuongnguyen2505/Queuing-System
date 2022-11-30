@@ -4,13 +4,14 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../../../../../../Components/Button";
 import FormInput from "../../../../../../../Components/FormInput";
 import Title from "../../../../../../../Components/Title";
-import "./style.scss";
+import "./styles.scss";
 
 const { Option } = Select;
-const handleChange = (value: string) => {
+const handleChange = (value: any) => {
   console.log(`selected ${value}`);
 };
-const FormAddDevice = () => {
+
+const FormUpdate = () => {
   const listDevice = [
     {
       option: "Kiosk",
@@ -49,11 +50,21 @@ const FormAddDevice = () => {
       label: "Khám tổng quát",
     },
   ];
+  const selected = [
+    [
+      "Khám tim mạch",
+      "Khám sản phụ khoa",
+      "Khám răng hàm mặt",
+      "Khám tai mũi họng",
+      "Khám hô hấp",
+      "Khám tổng quát",
+    ],
+  ];
   let navigate = useNavigate();
 
   return (
     <>
-      <div className="FormAddDevice">
+      <div className="FormUpdate">
         <Title
           color="var(--orange-500)"
           fontSize="20px"
@@ -66,21 +77,21 @@ const FormAddDevice = () => {
               type="text"
               width="540px"
               placeholder="Nhập mã thiết bị"
-              value=""
+              value="KIO_01"
             />
             <FormInput
               label="Tên thiết bị"
               type="text"
               width="540px"
               placeholder="Nhập tên thiết bị"
-              value=""
+              value="Kiosk"
             />
             <FormInput
               label="Địa chỉ IP"
               type="text"
               width="540px"
               placeholder="Nhập địa chỉ IP"
-              value=""
+              value="128.172.308"
             />
           </div>
           <div className="col">
@@ -96,6 +107,7 @@ const FormAddDevice = () => {
                 />
               }
               style={{ width: 540 }}
+              defaultValue="Kiosk"
               placeholder="Chọn loại thiết bị"
               optionFilterProp="children"
               onChange={handleChange}
@@ -109,14 +121,14 @@ const FormAddDevice = () => {
               type="text"
               width="540px"
               placeholder="Nhập tài khoản"
-              value=""
+              value="Linhkyo011"
             />
             <FormInput
               label="Mật khẩu"
               type="text"
               width="540px"
               placeholder="Nhập mật khẩu"
-              value=""
+              value="CMS"
             />
           </div>
         </div>
@@ -127,6 +139,7 @@ const FormAddDevice = () => {
           <Select
             mode="multiple"
             style={{ width: "1104px" }}
+            defaultValue={selected}
             placeholder="Nhập dịch vụ sử dụng"
             onChange={handleChange}
             optionLabelProp="label"
@@ -139,11 +152,9 @@ const FormAddDevice = () => {
           </Select>
         </div>
 
-        <span className="FormAddDevice__noti">
-          Là trường thông tin bắt buộc
-        </span>
+        <span className="FormUpdate__noti">Là trường thông tin bắt buộc</span>
       </div>
-      <div className="FormAddDevice__gr-btn">
+      <div className="FormUpdate__gr-btn">
         <Button
           border="1.5px solid var(--orange-400)"
           color="var(--orange-50)"
@@ -161,7 +172,7 @@ const FormAddDevice = () => {
           radius="8px"
           textColor="var(--white)"
           width="147px"
-          children="Thêm thiết bị"
+          children="Cập nhật"
           onClick={() => navigate("/device/listDevice")}
         />
       </div>
@@ -169,4 +180,4 @@ const FormAddDevice = () => {
   );
 };
 
-export default FormAddDevice;
+export default FormUpdate;

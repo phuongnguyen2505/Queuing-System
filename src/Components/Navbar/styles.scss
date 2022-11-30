@@ -1,5 +1,5 @@
 .Menubar {
-  position: relative;
+  position: sticky;
   background: var(--white);
   left: 0;
   width: 200px;
@@ -32,17 +32,16 @@
       p {
         color: var(--gray-300);
       }
-      &:hover {
-        color: var(--orange);
-        background: var(--orange-50);
-      }
     }
     a.active {
       .card {
-        background: var(--orange);
+        background: var(--orange-500);
         .icon {
           svg {
             stroke: var(--white);
+            path {
+              stroke: var(--white);
+            }
           }
         }
       }
@@ -54,6 +53,22 @@
       .card {
         .icon {
           stroke: var(--gray-300);
+        }
+        &:hover {
+          background: var(--orange-50);
+          .icon {
+            svg {
+              stroke: var(--orange-500);
+              path {
+                stroke: var(--orange-500);
+              }
+            }
+          }
+          .title {
+            p {
+              color: var(--orange-500);
+            }
+          }
         }
       }
     }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Title from "../../../../../Components/Title";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "./style.scss";
+import "./styles.scss";
 import { Progress } from "antd";
 import { ReactComponent as Monitor } from "../../../../../icons/monitor.svg";
 import { ReactComponent as Service } from "../../../../../icons/quest2.svg";
@@ -62,7 +62,11 @@ function RightBar() {
       <div className="RightBar">
         <div className="col">
           <div className="RightBar__topbar">
-            <Title fontSize="24px" children="Tổng quan" />
+            <Title
+              fontSize="24px"
+              children="Tổng quan"
+              color="var(--orange-500)"
+            />
             {totalItem.map((item) => (
               <div className="row row-topbar">
                 <div className="RightBar__process">
@@ -147,7 +151,7 @@ function RightBar() {
           <div className="RightBar__botbar">
             <DatePicker
               selected={startDate}
-              onChange={(date) => setStartDate(date)}
+              onChange={(date: any) => setStartDate(date)}
               inline
             />
           </div>
