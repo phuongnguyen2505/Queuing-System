@@ -1,11 +1,13 @@
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import Button from "../../../../../Components/Button";
 import FormInput from "../../../../../Components/FormInput";
 import FormTextArea from "../../../../../Components/FormTextArea";
 import Title from "../../../../../Components/Title";
-import CheckboxForm from "../../Components/CheckboxForm";
+import { useNavigate } from "react-router-dom";
 import "./styles.scss";
-const AddService = () => {
+import CheckboxForm from "../../Components/CheckboxForm";
+
+const ServiceUpdate = () => {
   const listCheck = [
     {
       label: "Tăng tự động từ",
@@ -30,6 +32,7 @@ const AddService = () => {
     },
   ];
   let navigate = useNavigate();
+
   return (
     <>
       <Title
@@ -37,7 +40,7 @@ const AddService = () => {
         fontSize="24px"
         children="Quản lý dịch vụ"
       />
-      <div className="addService">
+      <div className="serviceUpdate">
         <Title
           color="var(--orange-500)"
           fontSize="20px"
@@ -56,7 +59,7 @@ const AddService = () => {
               label="Tên dịch vụ"
               placeholder="Nhập tên dịch vụ"
               type="text"
-              value=""
+              value="Khám tim mạch"
               width="100%"
             />
           </div>
@@ -69,12 +72,12 @@ const AddService = () => {
           fontSize="20px"
           children="Quy tắc cấp số"
         />
-        <div className="addService__form-checkbox">
+        <div className="serviceUpdate__form-checkbox">
           <CheckboxForm prop={listCheck} width="150px" />
           <p className="imp-text">Là trường thông tin bắt buộc</p>
         </div>
       </div>
-      <div className="addService__gr-btn">
+      <div className="serviceUpdate__gr-btn">
         <Button
           border="1.5px solid var(--orange-400)"
           color="var(--orange-50)"
@@ -92,7 +95,7 @@ const AddService = () => {
           radius="8px"
           textColor="var(--white)"
           width="147px"
-          children="Thêm dịch vụ"
+          children="Cập nhật"
           onClick={() => navigate("/service/listService")}
         />
       </div>
@@ -100,4 +103,4 @@ const AddService = () => {
   );
 };
 
-export default AddService;
+export default ServiceUpdate;

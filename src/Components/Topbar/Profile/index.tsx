@@ -7,9 +7,11 @@ function Profile() {
   return (
     <>
       <div className="profile">
-        <div className="profile__avatar">
-          <img src={avatar} alt="" />
-        </div>
+        <Link to="/profile">
+          <div className="profile__avatar">
+            <img src={avatar} alt="" />
+          </div>
+        </Link>
         <Link to="/profile">
           <div className="profile__name">
             <p className="hello">Xin chào</p>

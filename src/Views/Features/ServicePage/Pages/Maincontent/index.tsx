@@ -117,13 +117,27 @@ const columns = [
     key: "update",
     render: () => (
       <Space size="middle">
-        <Link to={"/device/listService/serviceUpdate"}>Cập nhật</Link>
+        <Link to={"/service/listService/serviceDetails/serviceUpdate"}>
+          Cập nhật
+        </Link>
       </Space>
     ),
   },
 ];
 
 const Maincontent = () => {
+  const listActive = [
+    {
+      option: "Tất cả",
+    },
+    {
+      option: "Hoạt động",
+    },
+    {
+      option: "Ngưng hoạt động",
+    },
+  ];
+
   return (
     <>
       <div className="serviceContent">
@@ -134,9 +148,9 @@ const Maincontent = () => {
               fontSize="24px"
               children="Quản lý dịch vụ"
             />
-            <FormGroup onSearch="" />
+            <FormGroup onSearch="" prop={listActive} />
             <div className="table">
-              <FormTable columns={columns} dataSource={dataSource} />
+              <FormTable columns={columns} dataSource={dataSource} size={10} />
             </div>
           </div>
           <div className="btn-add">

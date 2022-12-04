@@ -14,6 +14,8 @@ import DeviceDetails from "./Views/Features/Device/Pages/DeviceDetails";
 import DeviceUpdate from "./Views/Features/Device/Pages/DeviceUpdate";
 import Service from "./Views/Features/ServicePage";
 import AddService from "./Views/Features/ServicePage/Pages/AddService";
+import ServiceDetails from "./Views/Features/ServicePage/Pages/ServiceDetails";
+import ServiceUpdate from "./Views/Features/ServicePage/Pages/ServiceUpdate";
 
 function App() {
   return (
@@ -35,6 +37,14 @@ function App() {
           <Route
             path="/service/listService/addService"
             element={<AddService />}
+          />
+          <Route
+            path="/service/listService/serviceDetails"
+            element={<ServiceDetails />}
+          />
+          <Route
+            path="/service/listService/serviceDetails/serviceUpdate"
+            element={<ServiceUpdate />}
           />
           <Route path="/profile" element={<ProfileDetails />} />
           {/* <Route path="/service" element={<Service />} />

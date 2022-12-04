@@ -1,16 +1,11 @@
 import { Badge, Space } from "antd";
-import React from "react";
-import { useId } from "react-id-generator";
-import { Link, Route } from "react-router-dom";
-import ReadMore from "../../../../../Components/ReadMore-Less";
+import { Link } from "react-router-dom";
 import FormTable from "../../../../../Components/FormTable";
+import ReadMore from "../../../../../Components/ReadMore-Less";
 import Title from "../../../../../Components/Title";
-import { ReactComponent as Next } from "../../../../../icons/next.svg";
 import { ReactComponent as Plus } from "../../../../../icons/plus.svg";
-import { ReactComponent as Prev } from "../../../../../icons/prev.svg";
 import FormGroup from "../../Components/FormGroup";
 import "./styles.scss";
-import AddService from "../../../ServicePage/Pages/AddService";
 
 function Maincontent() {
   const dataSource = [
@@ -211,7 +206,7 @@ function Maincontent() {
             />
             <FormGroup onSearch="" />
             <div className="table">
-              <FormTable columns={columns} dataSource={dataSource} />
+              <FormTable columns={columns} dataSource={dataSource} size={10} />
             </div>
           </div>
           <div className="btn-add">

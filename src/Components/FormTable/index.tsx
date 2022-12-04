@@ -7,11 +7,12 @@ import { useId } from "react-id-generator";
 interface Props {
   dataSource: any;
   columns: any;
+  size: number;
   // name: string;
   // code: string;
 }
 
-const FormTable: React.FC<Props> = ({ dataSource, columns }) => {
+const FormTable: React.FC<Props> = ({ dataSource, columns, size }) => {
   // const [filterInput, setFilterInput] = React.useState<any>("");
   // const filterData = () => {
   //   if (filterInput === "") return dataSource;
@@ -46,6 +47,7 @@ const FormTable: React.FC<Props> = ({ dataSource, columns }) => {
         columns={columns}
         pagination={{
           itemRender: itemRender,
+          defaultPageSize: size,
         }}
       />
     </>

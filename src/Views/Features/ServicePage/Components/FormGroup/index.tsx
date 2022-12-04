@@ -5,6 +5,7 @@ import "./styles.scss";
 
 interface Props {
   onSearch: string;
+  prop: any;
 }
 const { Option } = Select;
 const handleChange = (value: string) => {
@@ -15,19 +16,7 @@ const { RangePicker } = DatePicker;
 
 const { Search } = Input;
 
-const FormGroup: React.FC<Props> = ({ onSearch }) => {
-  const listActive = [
-    {
-      option: "Tất cả",
-    },
-    {
-      option: "Hoạt động",
-    },
-    {
-      option: "Ngưng hoạt động",
-    },
-  ];
-
+const FormGroup: React.FC<Props> = ({ onSearch, prop }) => {
   return (
     <>
       <div className="groupService">
@@ -50,8 +39,10 @@ const FormGroup: React.FC<Props> = ({ onSearch }) => {
                 optionFilterProp="children"
                 onChange={handleChange}
               >
-                {listActive.map((item) => (
-                  <Option value={item.option}>{item.option}</Option>
+                {prop.map((item) => (
+                  <Option key={item.id} value={item.option}>
+                    {item.option}
+                  </Option>
                 ))}
               </Select>
             </div>

@@ -34,7 +34,7 @@ function FormForgot() {
                 color="var(--white)"
                 textColor="var(--orange-400)"
                 height="40px"
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/login")}
                 radius="8px"
                 width="162px"
                 children="Hủy"

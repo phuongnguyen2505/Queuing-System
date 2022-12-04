@@ -49,12 +49,12 @@ const FormDetails = () => {
             <div className="row">
               <div className="col">
                 {listDetails.map((item) => (
-                  <FormLabel label={item.label} text={item.text} />
+                  <FormLabel label={item.label} text={item.text} width="95px" />
                 ))}
               </div>
               <div className="col">
                 {listDetail.map((item) => (
-                  <FormLabel label={item.label} text={item.text} />
+                  <FormLabel label={item.label} text={item.text} width="90px" />
                 ))}
               </div>
               <div className="FormDetails__service">

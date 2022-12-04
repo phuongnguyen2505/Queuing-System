@@ -15,6 +15,7 @@ function RightBar() {
       percent1: 90,
       percent2: 10,
       numeral: "4.221",
+      label: "Thiết bị",
       color: "var(--orange-500)",
       color2: "var(--yellow)",
       color3: "var(--gray-300)",
@@ -28,6 +29,7 @@ function RightBar() {
       percent1: 76,
       percent2: 24,
       numeral: "276",
+      label: "Dịch vụ",
       color: "var(--blue)",
       color2: "var(--blue)",
       color3: "var(--gray-300)",
@@ -42,6 +44,7 @@ function RightBar() {
       percent2: 13,
       percent3: 1,
       numeral: "4.221",
+      label: "Cấp số",
       classNames: "hidden-process",
       classNames2: "show-item",
       color: "var(--green)",
@@ -102,7 +105,7 @@ function RightBar() {
                   </div>
                   <div className="numeral-of">
                     {item.src}
-                    <span>Thiết bị</span>
+                    <span style={{ color: `${item.color}` }}>{item.label}</span>
                   </div>
                 </div>
                 <div className="RightBar__status">

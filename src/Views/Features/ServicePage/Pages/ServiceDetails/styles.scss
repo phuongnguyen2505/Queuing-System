@@ -1,0 +1,119 @@
+.serviceDetails {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 32px;
+  .FormLabel {
+    max-width: 500px;
+    input {
+      width: 80%;
+    }
+  }
+
+  &__gr-left {
+    max-width: 25vw;
+    height: 70vh;
+    box-shadow: 2px 2px 8px rgba(186, 191, 194, 0.8);
+    border-radius: 16px;
+    padding: 16px;
+    margin-right: 24px;
+  }
+
+  &__gr-right {
+    width: 70vw;
+    box-shadow: 2px 2px 8px rgba(186, 191, 194, 0.8);
+    border-radius: 16px;
+    padding: 16px 24px;
+    .groupService__select {
+      .col {
+        margin-right: 0;
+        &:first-child {
+          margin-right: 12px;
+        }
+      }
+    }
+    .ant-select {
+      max-width: 160px;
+    }
+    .ant-picker {
+      .ant-picker-input {
+        max-width: 130px;
+      }
+      .ant-picker-range-separator {
+        padding: 0;
+      }
+    }
+    .ant-input-group-wrapper {
+      max-width: 206px;
+    }
+  }
+  &__form-checkbox {
+    .ant-checkbox-wrapper {
+      span {
+        &:last-child {
+          padding-left: 0;
+        }
+      }
+    }
+    .ant-checkbox {
+      display: none;
+    }
+    .imp-text {
+      font-size: 14px;
+      &::before {
+        content: "* ";
+        color: var(--red);
+      }
+    }
+  }
+
+  table {
+    border-radius: 8px;
+    height: fit-content;
+    table-layout: fixed;
+    .btn-prev-next {
+      line-height: 45px;
+    }
+    thead {
+      border-radius: 8px !important;
+      th {
+        background: var(--orange-400);
+        color: var(--white);
+        font-size: 1rem;
+        font-weight: 700;
+        border: 1px solid var(--orange-50);
+        padding: 13px;
+        white-space: nowrap;
+        &:first-child {
+          border-radius: 10px 0 0 0 !important;
+        }
+        &:last-child {
+          border-radius: 0 10px 0 0 !important;
+        }
+      }
+    }
+    tbody {
+      font-size: 14px;
+      border-radius: 10px;
+
+      tr {
+        background: var(--white);
+        &:nth-child(even) {
+          background: var(--orange-50);
+        }
+        td {
+          padding: 10px 16px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  .btn-add {
+    top: 0;
+    .col {
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
