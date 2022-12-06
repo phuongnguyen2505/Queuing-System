@@ -95,8 +95,8 @@ const FormAddDevice = () => {
                   }}
                 />
               }
-              style={{ width: 540 }}
-              placeholder="Chọn loại thiết bị"
+              style={{ width: 300, fontSize: 16 }}
+              placeholder="Chọn thiết bị"
               optionFilterProp="children"
               onChange={handleChange}
             >

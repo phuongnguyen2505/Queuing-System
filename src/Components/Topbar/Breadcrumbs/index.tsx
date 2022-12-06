@@ -26,17 +26,23 @@ const Breadcrumbs = () => {
               device: "Thiết bị",
               profile: "Thông tin cá nhân",
               service: "Dịch vụ",
-              level: "Cấp số",
+              provideN: "Cấp số",
               report: "Báo cáo",
               setting: "Cài đặt hệ thống",
+
               listDevice: "Danh sách thiết bị",
               addDevice: "Thêm thiết bị",
               deviceDetails: "Chi tiết thiết bị",
               deviceUpdate: "Cập nhật thiết bị",
+
               listService: "Danh sách dịch vụ",
               addService: "Thêm dịch vụ",
               serviceDetails: "Chi tiết",
               serviceUpdate: "Cập nhật",
+
+              listProvideN: "Danh sách cấp số",
+              addProvideN: "Cấp số mới",
+              provideNDetails: "chi tiết",
             };
             return isLast ? (
               <Breadcrumb.Item key={name} className="breadcrumbsCustomStyle">

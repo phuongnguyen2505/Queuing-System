@@ -77,6 +77,7 @@
   .ant-btn {
     border-radius: 0 8px 8px 0 !important;
     border-left: transparent;
+    width: 50px;
     height: 44px;
     svg {
       width: 20px !important;
@@ -130,6 +131,55 @@
   margin: 0 12px;
 }
 
+// .table {
+//   height: 32vw !important;
+// }
+table {
+  border-radius: 8px;
+  height: fit-content !important;
+  table-layout: fixed;
+  .btn-prev-next {
+    line-height: 45px;
+  }
+  thead {
+    border-radius: 8px !important;
+    th {
+      background: var(--orange-400) !important;
+      color: var(--white) !important;
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      border: 1px solid var(--orange-50) !important;
+      padding: 13px !important;
+      white-space: nowrap !important;
+      &:first-child {
+        border-radius: 10px 0 0 0 !important;
+      }
+      &:last-child {
+        border-radius: 0 10px 0 0 !important;
+      }
+    }
+  }
+  tbody {
+    font-size: 14px;
+    border-radius: 10px !important;
+
+    tr {
+      background: var(--white);
+      &:nth-child(even) {
+        background: var(--orange-50);
+      }
+      td {
+        padding: 10px 16px !important;
+        &:not(:nth-child(6)) {
+          white-space: nowrap;
+        }
+      }
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}
 .ant-pagination {
   align-items: center;
   li {

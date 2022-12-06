@@ -1,6 +1,6 @@
 .ant-breadcrumb {
   position: relative;
-  width: calc(100%);
+  width: 100%;
   height: 88px;
   font-weight: 700;
   font-size: 20px !important;
@@ -8,7 +8,7 @@
   padding: 30px !important;
   span {
     text-transform: capitalize;
-    color: var(--orange-400) !important;
+    color: var(--orange-500) !important;
     margin-right: 15px;
   }
 }

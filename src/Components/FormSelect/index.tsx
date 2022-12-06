@@ -4,35 +4,40 @@ import { CaretDownOutlined } from "@ant-design/icons";
 import "./styles.scss";
 
 const { Option } = Select;
-const handleChange = (value: string) => {
-  console.log(`selected ${value}`);
-};
 
 interface Props {
-  option: string;
+  prop: any;
+  label: string;
+  width: string;
   value: string;
+  place: string;
 }
 
-const FormSelect: React.FC<Props> = ({ option, value }) => {
+const FormSelect: React.FC<Props> = ({ prop, label, width, value, place }) => {
   return (
     <>
-      <Select
-        suffixIcon={
-          <CaretDownOutlined
-            style={{
-              fontSize: "20px",
-              color: "var(--orange-500)",
-              pointerEvents: "none",
-            }}
-          />
-        }
-        style={{ width: 100 }}
-        defaultValue={option}
-        optionFilterProp="children"
-        onChange={handleChange}
-      >
-        <Option value={value}>{option}</Option>
-      </Select>
+      <div className="selectProvide" style={{ width: width }}>
+        <p>{label}</p>
+        <Select
+          suffixIcon={
+            <CaretDownOutlined
+              style={{
+                fontSize: "20px",
+                color: "var(--orange-500)",
+                pointerEvents: "none",
+              }}
+            />
+          }
+          style={{ width: 300 }}
+          placeholder={place}
+          defaultValue={value}
+          optionFilterProp="children"
+        >
+          {prop.map((item) => (
+            <Option value={item.option}>{item.option}</Option>
+          ))}
+        </Select>
+      </div>
     </>
   );
 };

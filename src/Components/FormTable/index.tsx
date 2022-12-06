@@ -18,9 +18,9 @@ const FormTable: React.FC<Props> = ({ dataSource, columns, size }) => {
   //   if (filterInput === "") return dataSource;
 
   //   if (isNaN(filterInput)) {
-  //     return dataSource.filter(({ name }) => name.includes(filterInput));
+  //     return dataSource.filter((`${ name }`) => name.includes(filterInput));
   //   }
-  //   return dataSource.filter(({ code }) => code === filterInput);
+  //   return dataSource.filter((`${ code }`) => code  === filterInput);
   // };
   const itemRender = (_, type: string, originalElement: any) => {
     console.log(type, "a");

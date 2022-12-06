@@ -16,6 +16,9 @@ import Service from "./Views/Features/ServicePage";
 import AddService from "./Views/Features/ServicePage/Pages/AddService";
 import ServiceDetails from "./Views/Features/ServicePage/Pages/ServiceDetails";
 import ServiceUpdate from "./Views/Features/ServicePage/Pages/ServiceUpdate";
+import ProvideNumber from "./Views/Features/ProvideNumber";
+import AddProvideN from "./Views/Features/ProvideNumber/Pages/AddProvideN";
+import ProvideNDetails from "./Views/Features/ProvideNumber/Pages/ProvideNDetails";
 
 function App() {
   return (
@@ -45,6 +48,15 @@ function App() {
           <Route
             path="/service/listService/serviceDetails/serviceUpdate"
             element={<ServiceUpdate />}
+          />
+          <Route path="/provideN/listprovideN" element={<ProvideNumber />} />
+          <Route
+            path="/provideN/listprovideN/addProvideN"
+            element={<AddProvideN />}
+          />
+          <Route
+            path="/provideN/listprovideN/provideNDetails"
+            element={<ProvideNDetails />}
           />
           <Route path="/profile" element={<ProfileDetails />} />
           {/* <Route path="/service" element={<Service />} />

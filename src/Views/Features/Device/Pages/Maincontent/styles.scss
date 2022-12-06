@@ -1,85 +1,11 @@
 .DeviceContent {
   width: 100%;
-  .table {
-    height: 490px;
-  }
   table {
-    border-radius: 8px;
-    height: fit-content;
-    table-layout: fixed;
-    .btn-prev-next {
-      line-height: 45px;
-    }
-    thead {
-      border-radius: 8px !important;
-      th {
-        background: var(--orange-400);
-        color: var(--white);
-        font-size: 1rem;
-        font-weight: 700;
-        border: 1px solid var(--orange-50);
-        padding: 13px;
+    td {
+      padding: 0 16px !important;
+      &:not(:nth-child(6)) {
         white-space: nowrap;
-        &:first-child {
-          border-radius: 10px 0 0 0 !important;
-        }
-        &:last-child {
-          border-radius: 0 10px 0 0 !important;
-        }
       }
     }
-    tbody {
-      font-size: 14px;
-      border-radius: 10px;
-
-      tr {
-        background: var(--white);
-        &:nth-child(even) {
-          background: var(--orange-50);
-        }
-        td {
-          padding: 0 16px;
-          &:not(:nth-child(6)) {
-            white-space: nowrap;
-          }
-        }
-      }
-    }
-  }
-  .ant-pagination {
-    align-items: center;
-    li {
-      &:first-child,
-      &:last-child {
-        line-height: 45px;
-      }
-    }
-    .ant-pagination-disabled {
-      svg {
-        fill: var(--blue-gray-4);
-        path {
-          stroke: var(--blue-gray-4);
-        }
-      }
-    }
-    .ant-pagination-item {
-      border: none;
-      a {
-        font-weight: 600;
-        text-decoration: none;
-        color: var(--blue-gray-3);
-      }
-    }
-    .ant-pagination-item-active {
-      background: var(--orange-500);
-      border: none;
-      border-radius: 4px;
-      a {
-        color: var(--white);
-      }
-    }
-  }
-  a {
-    text-decoration: underline;
   }
 }

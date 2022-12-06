@@ -1,0 +1,78 @@
+.addProvideN {
+  width: 98%;
+  height: 75vh;
+  box-shadow: 2px 2px 8px rgba(165, 172, 176, 0.8);
+  padding: 24px;
+  margin-top: 24px;
+  border-radius: 16px;
+  .title {
+    text-align: center !important;
+    &:first-child {
+      text-transform: uppercase;
+      margin-bottom: 20px !important;
+    }
+  }
+  &__select {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 12px;
+  }
+  &__gr-btn {
+    text-align: center;
+    margin-top: 80px;
+    button {
+      &:first-child {
+        margin-right: 32px;
+      }
+    }
+  }
+}
+.ant-modal {
+  .ant-modal-content {
+    border-radius: 24px;
+    .ant-modal-body {
+      text-align: center;
+      .title {
+        text-align: center !important;
+      }
+    }
+    .ant-modal-footer {
+      padding: 0;
+      text-align: center !important;
+      .ft-text {
+        padding: 16px 0 !important;
+        height: 110px;
+        color: var(--white);
+        font-size: 22px;
+        font-weight: 700;
+        background: var(--orange-400);
+        padding: 0;
+        border-radius: 0 0 24px 24px;
+        p {
+          &:first-child {
+            padding-bottom: 12px;
+          }
+        }
+      }
+    }
+    .ant-modal-close {
+      color: var(--orange-400);
+      .ant-modal-close-x {
+        .anticon {
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+  .provideN {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--orange-500);
+  }
+  .provideText {
+    font-size: 18px;
+  }
+}

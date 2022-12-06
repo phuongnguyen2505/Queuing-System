@@ -3,6 +3,7 @@ import { CaretDownOutlined } from "@ant-design/icons";
 import { Input, Select, Space } from "antd";
 import "./styles.scss";
 import "antd/dist/antd.css";
+import FormSelect from "../../../../../Components/FormSelect";
 
 interface Props {
   onSearch: any;
@@ -45,48 +46,22 @@ const FormGroup: React.FC<Props> = ({ onSearch }) => {
         <div className="row">
           <div className="formGroup__select flex">
             <div className="col">
-              <p>Trạng thái hoạt động</p>
-              <Select
-                suffixIcon={
-                  <CaretDownOutlined
-                    style={{
-                      fontSize: "20px",
-                      color: "var(--orange-500)",
-                      pointerEvents: "none",
-                    }}
-                  />
-                }
-                style={{ width: 300 }}
-                defaultValue="Tất cả"
-                optionFilterProp="children"
-                onChange={handleChange}
-              >
-                {listActive.map((item) => (
-                  <Option value={item.option}>{item.option}</Option>
-                ))}
-              </Select>
+              <FormSelect
+                label="Trạng thái hoạt động"
+                prop={listActive}
+                width="300px"
+                place=""
+                value="Tất cả"
+              />
             </div>
             <div className="col">
-              <p>Trạng thái kết nối</p>
-              <Select
-                suffixIcon={
-                  <CaretDownOutlined
-                    style={{
-                      fontSize: "20px",
-                      color: "var(--orange-500)",
-                      pointerEvents: "none",
-                    }}
-                  />
-                }
-                style={{ width: 300 }}
-                defaultValue="Tất cả"
-                optionFilterProp="children"
-                onChange={handleChange}
-              >
-                {listConnect.map((item) => (
-                  <Option value={item.option}>{item.option}</Option>
-                ))}
-              </Select>
+              <FormSelect
+                label="Trạng thái kết nối"
+                prop={listConnect}
+                width="300px"
+                place=""
+                value="Tất cả"
+              />
             </div>
           </div>
           <div className="formGroup__search">

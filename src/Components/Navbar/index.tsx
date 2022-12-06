@@ -62,7 +62,7 @@ function Navbar() {
               </div>
             </NavLink>
             <NavLink
-              to="/level"
+              to="/provideN/listProvideN"
               className={({ isActive }) => (isActive ? "active" : "inactive")}
             >
               <div className="card">

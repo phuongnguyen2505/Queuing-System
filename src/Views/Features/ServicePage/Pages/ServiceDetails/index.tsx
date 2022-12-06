@@ -106,20 +106,6 @@ const columns = [
   },
 ];
 const ServiceDetails = () => {
-  const listActive = [
-    {
-      option: "Tất cả",
-    },
-    {
-      option: "Đã hoàn thành",
-    },
-    {
-      option: "Đã thực hiện",
-    },
-    {
-      option: "Vắng",
-    },
-  ];
   return (
     <>
       <Title
@@ -149,7 +135,7 @@ const ServiceDetails = () => {
             </div>
           </div>
           <div className="serviceDetails__gr-right col">
-            <FormGroup onSearch="" prop={listActive} />
+            <FormGroup onSearch="" />
             <div className="table">
               <FormTable columns={columns} dataSource={dataSource} size={8} />
             </div>

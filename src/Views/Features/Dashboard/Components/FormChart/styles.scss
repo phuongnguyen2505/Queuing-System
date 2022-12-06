@@ -1,5 +1,5 @@
 .formchart {
-  width: 100%;
+  width: 57vw;
   background: var(--white);
   border-radius: 12px;
   padding: 24px;
@@ -12,8 +12,12 @@
         padding-bottom: 5px;
       }
     }
-    span {
+    .select-day {
+      display: flex;
+      flex-direction: row;
       font-weight: 600;
+      align-items: center;
+      margin-right: 18px;
       .ant-select {
         margin-left: 10px;
       }

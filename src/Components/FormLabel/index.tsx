@@ -12,12 +12,7 @@ const FormLabel: React.FC<Props> = ({ label, text, width }) => {
     <>
       <div className="FormLabel">
         <span>{label}:</span>
-        <input
-          type="text"
-          placeholder={text}
-          style={{ width: width }}
-          readOnly
-        />
+        <input type="text" style={{ width: width }} value={text} readOnly />
       </div>
     </>
   );

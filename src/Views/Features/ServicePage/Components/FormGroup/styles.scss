@@ -11,39 +11,4 @@
       margin-right: 24px;
     }
   }
-
-  .ant-picker {
-    height: 44px !important;
-    border: none;
-    padding: 0;
-    .ant-picker-input {
-      width: 150px;
-      border: 1px solid var(--gray-100);
-      border-radius: 8px;
-      padding: 15px;
-      height: 100%;
-      &::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        padding: 13px;
-        line-height: 30px;
-        background-image: url("../../../../../icons/calendar.svg");
-        background-repeat: no-repeat;
-      }
-      &:first-child {
-      }
-    }
-    .ant-picker-range-separator {
-      .ant-picker-separator {
-        width: 15px;
-        height: 10px;
-        background-image: url("../../../../../icons/arrow-right.svg");
-        background-repeat: no-repeat;
-        .anticon {
-          display: none;
-        }
-      }
-    }
-  }
 }

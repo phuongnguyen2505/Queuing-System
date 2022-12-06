@@ -6,6 +6,7 @@ import FormTable from "../../../../../Components/FormTable";
 import Title from "../../../../../Components/Title";
 import FormGroup from "../../Components/FormGroup";
 import "./style.scss";
+import { useState } from "react";
 
 const dataSource = [
   {
@@ -126,18 +127,6 @@ const columns = [
 ];
 
 const Maincontent = () => {
-  const listActive = [
-    {
-      option: "Tất cả",
-    },
-    {
-      option: "Hoạt động",
-    },
-    {
-      option: "Ngưng hoạt động",
-    },
-  ];
-
   return (
     <>
       <div className="serviceContent">
@@ -148,7 +137,7 @@ const Maincontent = () => {
               fontSize="24px"
               children="Quản lý dịch vụ"
             />
-            <FormGroup onSearch="" prop={listActive} />
+            <FormGroup onSearch="" />
             <div className="table">
               <FormTable columns={columns} dataSource={dataSource} size={10} />
             </div>

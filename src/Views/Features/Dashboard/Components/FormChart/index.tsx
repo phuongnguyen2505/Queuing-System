@@ -4,6 +4,7 @@ import Title from "../../../../../Components/Title";
 import { CaretDownOutlined } from "@ant-design/icons";
 import "./styles.scss";
 import AreaChart from "./components/AreaChart";
+import FormSelect from "../../../../../Components/FormSelect";
 
 const { Option } = Select;
 const handleChange = (value: string) => {
@@ -37,28 +38,16 @@ const FormChart = () => {
               <p>Tháng 11/2022</p>
             </div>
           </div>
-          <span>
-            Xem theo
-            <Select
-              suffixIcon={
-                <CaretDownOutlined
-                  style={{
-                    fontSize: "20px",
-                    color: "var(--orange-500)",
-                    pointerEvents: "none",
-                  }}
-                />
-              }
-              style={{ width: 100, borderRadius: 12 }}
-              defaultValue="Ngày"
-              optionFilterProp="children"
-              onChange={handleChange}
-            >
-              {listTimes.map((item) => (
-                <Option value={item.option}>{item.option}</Option>
-              ))}
-            </Select>
-          </span>
+          <div className="select-day">
+            <p>Xem theo</p>
+            <FormSelect
+              label=""
+              prop={listTimes}
+              width="106px"
+              place=""
+              value="Ngày"
+            />
+          </div>
         </div>
         <div className="formchart__chart">
           <AreaChart />
