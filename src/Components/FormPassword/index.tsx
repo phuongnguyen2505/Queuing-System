@@ -1,12 +1,14 @@
-import { Input, Space } from "antd";
+import { Form, Input, Space } from "antd";
 import React from "react";
 import "./styles.scss";
 
 interface Props {
   label: string;
+  place: string;
+  width: string;
 }
 
-const FromPassword: React.FC<Props> = ({ label }) => {
+const FromPassword: React.FC<Props> = ({ label, place, width }) => {
   const [showPassword, setShowPassword] = React.useState(false);
 
   function onMouseDown() {
@@ -19,17 +21,25 @@ const FromPassword: React.FC<Props> = ({ label }) => {
   return (
     <>
       <Space direction="vertical">
-        <label htmlFor="">{label}</label>
-        <Input.Password
-          style={{ width: "400px", height: "44px", borderRadius: "8px" }}
-        />
-        <Input
-          type={showPassword ? "text" : "password"}
-          placeholder="input password"
-          onMouseDown={onMouseDown}
-          onMouseUp={onMouseUp}
-          hidden
-        />
+        <Form>
+          <label htmlFor="">{label}</label>
+          <Form.Item
+            name="password"
+            rules={[{ required: true, message: "Không được bỏ trống!" }]}
+          >
+            <Input.Password
+              style={{ width: width, height: "44px" }}
+              placeholder={place}
+            />
+            <Input
+              type={showPassword ? "text" : "password"}
+              placeholder="Nhập mật khẩu"
+              onMouseDown={onMouseDown}
+              onMouseUp={onMouseUp}
+              hidden
+            />
+          </Form.Item>
+        </Form>
       </Space>
     </>
   );

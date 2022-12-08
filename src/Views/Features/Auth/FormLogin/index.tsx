@@ -23,7 +23,7 @@ function FormLogin() {
               placeholder="Nhập tên đăng nhập"
               value=""
             />
-            <FromPassword label="Mật khẩu" />
+            <FromPassword label="Mật khẩu" place="Nhập mật khẩu" width="" />
             <Link to="/forgot">Quên mật khẩu?</Link>
             <Button
               border="none"

@@ -19,8 +19,8 @@ function ResetPassword() {
               fontSize="22px"
               color="var(--gray-500)"
             />
-            <FromPassword label="Mật khẩu" />
-            <FromPassword label="Nhập lại mật khẩu" />
+            <FromPassword label="Mật khẩu" place="Nhập mật khẩu" />
+            <FromPassword label="Nhập lại mật khẩu" place="Nhập lại mật khẩu" />
             <Button
               border="none"
               color="var(--orange)"

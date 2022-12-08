@@ -6,12 +6,80 @@ import { ReactComponent as Device } from "../../icons/monitor.svg";
 import { ReactComponent as Service } from "../../icons/quest.svg";
 import { ReactComponent as Report } from "../../icons/report.svg";
 import { ReactComponent as Setting } from "../../icons/setting.svg";
+import { ReactComponent as Dot } from "../../icons/3dot.svg";
+import type { MenuProps } from "antd";
+import { Menu } from "antd";
 import Logo from "../Logo";
 import Topbar from "../Topbar";
 import "./styles.scss";
 
 function Navbar() {
   let navigate = useNavigate();
+  const onClick: MenuProps["onClick"] = (e) => {
+    console.log("click", e);
+  };
+  type MenuItem = Required<MenuProps>["items"][number];
+  function getItem(
+    label: React.ReactNode,
+    key?: React.Key | null,
+    icon?: React.ReactNode,
+    children?: MenuItem[],
+    type?: "group"
+  ): MenuItem {
+    return {
+      key,
+      icon,
+      children,
+      label,
+      type,
+    } as MenuItem;
+  }
+  const items: MenuItem[] = [
+    getItem(
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "inactive")}
+        to="/systemSetting"
+      >
+        <div className="card">
+          <div className="icon">
+            <Setting />
+          </div>
+          <div className="title">
+            <p>Cài đặt hệ thống</p>
+            <Dot />
+          </div>
+        </div>
+      </NavLink>,
+      "/systemSetting",
+      null,
+      [
+        getItem(
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/systemSetting/roleManage"
+          >
+            Quản lý vai trò
+          </NavLink>
+        ),
+        getItem(
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/systemSetting/accountManage"
+          >
+            Quản lý tài khoản
+          </NavLink>
+        ),
+        getItem(
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="/systemSetting/userDiary"
+          >
+            Nhật ký người dùng
+          </NavLink>
+        ),
+      ]
+    ),
+  ];
   return (
     <>
       <div className="flex">
@@ -75,7 +143,7 @@ function Navbar() {
               </div>
             </NavLink>
             <NavLink
-              to="/report"
+              to="/report/createReport"
               className={({ isActive }) => (isActive ? "active" : "inactive")}
             >
               <div className="card">
@@ -87,19 +155,14 @@ function Navbar() {
                 </div>
               </div>
             </NavLink>
-            <NavLink
-              to="/setting"
-              className={({ isActive }) => (isActive ? "active" : "inactive")}
-            >
-              <div className="card">
-                <div className="icon">
-                  <Setting />
-                </div>
-                <div className="title">
-                  <p>Cài đặt hệ thống</p>
-                </div>
-              </div>
-            </NavLink>
+
+            <Menu
+              onClick={onClick}
+              style={{ width: "100%" }}
+              mode="vertical"
+              items={items}
+              expandIcon=" "
+            />
           </div>
           <div className="logout">
             <button onClick={() => navigate("/login")}>
@@ -107,15 +170,6 @@ function Navbar() {
                 <Logout /> Đăng xuất
               </div>
             </button>
-            {/* <Button
-            border="none"
-            color="var(--orange-50)"
-            height="100%"
-            onClick={() => console.log("function")}
-            radius="8px"
-            width="90%"
-            children="Đăng xuất"
-          /> */}
           </div>
         </div>
 

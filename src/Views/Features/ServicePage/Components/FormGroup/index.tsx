@@ -32,7 +32,7 @@ const FormGroup: React.FC<Props> = ({ onSearch }) => {
               <FormSelect
                 label="Trạng thái hoạt động"
                 prop={listActive}
-                width="300px"
+                width="160px"
                 place=""
                 value="Tất cả"
               />
@@ -48,7 +48,6 @@ const FormGroup: React.FC<Props> = ({ onSearch }) => {
               <Space direction="vertical">
                 <Search
                   allowClear
-                  onSearch={onSearch}
                   placeholder="Nhập từ khóa"
                   style={{ width: 300 }}
                 />

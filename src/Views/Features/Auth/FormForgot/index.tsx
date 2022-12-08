@@ -25,7 +25,7 @@ function FormForgot() {
               label="Vui lòng nhập email để đặt lại mật khẩu của bạn"
               width="400px"
               type="email"
-              placeholder=""
+              placeholder="Nhập email"
               value=""
             />
             <div className="loginFrom__btn">

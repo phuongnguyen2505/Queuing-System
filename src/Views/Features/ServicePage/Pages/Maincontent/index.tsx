@@ -6,7 +6,6 @@ import FormTable from "../../../../../Components/FormTable";
 import Title from "../../../../../Components/Title";
 import FormGroup from "../../Components/FormGroup";
 import "./style.scss";
-import { useState } from "react";
 
 const dataSource = [
   {

@@ -1,6 +1,7 @@
 .ant-select {
   width: 100% !important;
 }
+
 .ant-select-dropdown {
   width: fit-content !important;
   max-height: 200px !important;
@@ -10,4 +11,16 @@
   border-radius: 8px !important;
   height: 42px !important;
   align-items: center;
+  .ant-select-selection-item {
+    font-size: 16px;
+  }
+}
+.ant-select-selection-placeholder {
+  font-size: 16px;
+  padding-left: 5px !important;
+}
+.selectForm {
+  p {
+    padding-bottom: 5px;
+  }
 }

@@ -1,4 +1,4 @@
-import { Input } from "antd";
+import { Form, Input } from "antd";
 import React from "react";
 import "./styles.scss";
 
@@ -19,15 +19,20 @@ const FormInput: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <form className="form-input">
+      <Form className="form-input">
         <label htmlFor="">{label}</label>
-        <Input
-          style={{ width }}
-          value={value}
-          type={type}
-          placeholder={placeholder}
-        />
-      </form>
+        <Form.Item
+          name={label}
+          rules={[{ required: true, message: "Không được bỏ trống!" }]}
+        >
+          <Input
+            style={{ width }}
+            defaultValue={value}
+            type={type}
+            placeholder={placeholder}
+          />
+        </Form.Item>
+      </Form>
     </>
   );
 };

@@ -28,7 +28,7 @@ const Breadcrumbs = () => {
               service: "Dịch vụ",
               provideN: "Cấp số",
               report: "Báo cáo",
-              setting: "Cài đặt hệ thống",
+              systemSetting: "Cài đặt hệ thống",
 
               listDevice: "Danh sách thiết bị",
               addDevice: "Thêm thiết bị",
@@ -43,6 +43,15 @@ const Breadcrumbs = () => {
               listProvideN: "Danh sách cấp số",
               addProvideN: "Cấp số mới",
               provideNDetails: "chi tiết",
+
+              createReport: "Lập báo cáo",
+              roleManage: "Quản lý vai trò",
+              accountManage: "Quản lý tài khoản",
+              userDiary: "Nhật ký người dùng",
+              addRole: "Thêm vai trò",
+              updateRole: "Cập nhật vai trò",
+              addAccount: "Thêm tài khoản",
+              updateAccount: "Cập nhật tài khoản",
             };
             return isLast ? (
               <Breadcrumb.Item key={name} className="breadcrumbsCustomStyle">

@@ -1,0 +1,50 @@
+.addRole {
+  margin-top: 32px;
+  padding: 16px 24px;
+  width: 98%;
+  height: 65vh;
+  box-shadow: 2px 2px 8px rgba(187, 192, 195, 0.8);
+  border-radius: 16px;
+  .FormTextArea {
+    margin-left: 0;
+  }
+  .row {
+    margin-top: 12px;
+    .col {
+      &:first-child {
+        margin-right: 24px;
+      }
+      .noti {
+        position: absolute;
+        top: 68%;
+        &::before {
+          content: "* ";
+          color: var(--red);
+        }
+      }
+    }
+  }
+
+  &__dec {
+    .noti-role {
+      &::after {
+        content: " *";
+        color: var(--red);
+      }
+    }
+  }
+  &__dec-inner {
+    overflow-y: scroll;
+    background: var(--orange-50);
+    height: 50vh;
+    border-radius: 8px;
+    padding: 16px 24px;
+  }
+  &__gr-btn {
+    margin: 0 auto;
+    margin-top: 24px;
+    button {
+      margin-right: 32px;
+    }
+  }
+}

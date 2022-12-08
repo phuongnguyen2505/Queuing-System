@@ -1,0 +1,44 @@
+.addAccount {
+  margin-top: 32px;
+  padding: 16px 24px;
+  width: 98%;
+  height: 65vh;
+  box-shadow: 2px 2px 8px rgba(187, 192, 195, 0.8);
+  border-radius: 16px;
+  .row {
+    .col {
+      &:first-child {
+        padding-right: 24px;
+      }
+      .selectProvide {
+        p {
+          &::after {
+            content: " *";
+            color: var(--red);
+          }
+        }
+      }
+      .noti {
+        margin-top: 12px;
+        &::before {
+          content: "* ";
+          color: var(--red);
+        }
+      }
+      .ant-space {
+        width: 100%;
+        // gap: 4px !important;
+      }
+    }
+    .password {
+      margin-bottom: 16px;
+    }
+  }
+  &__gr-btn {
+    margin: 0 auto;
+    margin-top: 24px;
+    button {
+      margin-right: 32px;
+    }
+  }
+}

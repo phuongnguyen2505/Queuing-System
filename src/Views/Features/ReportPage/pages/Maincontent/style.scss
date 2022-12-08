@@ -1,0 +1,21 @@
+.reportContent {
+  .formDatePicker {
+    margin-bottom: 16px;
+  }
+  .ant-table-column-sorter {
+    .ant-table-column-sorter-inner {
+      .anticon {
+        color: var(--white);
+      }
+      //   .anticon.active {
+      //     color: var(--white);
+      //   }
+      //   .anticon.inactive {
+      //     color: var(--gray-200);
+      //   }
+    }
+  }
+}
+.btn-add {
+  top: 85px !important;
+}

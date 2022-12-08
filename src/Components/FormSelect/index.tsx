@@ -16,7 +16,7 @@ interface Props {
 const FormSelect: React.FC<Props> = ({ prop, label, width, value, place }) => {
   return (
     <>
-      <div className="selectProvide" style={{ width: width }}>
+      <div className="selectForm" style={{ width: width }}>
         <p>{label}</p>
         <Select
           suffixIcon={

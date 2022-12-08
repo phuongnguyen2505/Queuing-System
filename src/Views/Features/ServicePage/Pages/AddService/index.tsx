@@ -61,7 +61,7 @@ const AddService = () => {
             />
           </div>
           <div className="col">
-            <FormTextArea label="Mô tả" placeholder="Mô tả dịch vụ" />
+            <FormTextArea label="Mô tả" placeholder="Mô tả dịch vụ" size={6} />
           </div>
         </div>
         <Title
